@@ -425,6 +425,7 @@ main {
   animation-name: aparecer;
   animation-duration: 2.5s; 
   animation-fill-mode: forwards; 
+  order: 9999;
 }
 
 @keyframes aparecer {
