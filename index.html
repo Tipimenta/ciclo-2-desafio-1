@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Garçon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <main>
+    <div id="menu-boteco" class="inativo">
+      <div class="menu-container">
+        <div class="menu-conteudo">
+          <h2>PRATOS</h2>
+          <ul class="itens">
+            <li class="item"><span class="juntos">
+                <div class="contador"></div><button class="plus">+</button>
+              </span><span class="gray">Amendoim</span><span class="brown">R$ <span class="valor">10.00</span></span>
+            </li>
+            <li class="item"><span class="juntos">
+                <div class="contador"></div><button class="plus">+</button>
+              </span><span class="gray">Torresmo</span><span class="brown">R$ <span class="valor">14.00</span></span>
+            </li>
+            <li class="item"><span class="juntos">
+                <div class="contador"></div><button class="plus">+</button>
+              </span><span class="gray">Salgadinhos</span><span class="brown">R$ <span class="valor">16.00</span></span>
+            </li>
+            <h2>LANCHES</h2>
+            <li class="item"><span class="juntos">
+                <div class="contador"></div><button class="plus">+</button>
+              </span><span class="gray">Calabresa</span><span class="brown">R$ <span class="valor">18.00</span></span>
+            </li>
+            <li class="item"><span class="juntos">
+                <div class="contador"></div><button class="plus">+</button>
+              </span><span class="gray">Batata Frita</span><span class="brown">R$ <span
+                  class="valor">14.00</span></span></li>
+            <li class="item"><span class="juntos">
+                <div class="contador"></div><button class="plus">+</button>
+              </span><span class="gray">Isca de carne</span><span class="brown">R$ <span
+                  class="valor">20.00</span></span></li>
+            <li class="item"><span class="juntos">
+                <div class="contador"></div><button class="plus">+</button>
+              </span><span class="gray">Salame com Limão</span><span class="brown">R$ <span
+                  class="valor">16.00</span></span></li>
+            <h2>SOBREMESAS</h2>
+            <li class="item"><span class="juntos">
+                <div class="contador"></div><button class="plus">+</button>
+              </span><span class="gray">Sorvete</span><span class="brown">R$ <span class="valor">10.00</span></span>
+            </li>
+            <li class="item"><span class="juntos">
+                <div class="contador"></div><button class="plus">+</button>
+              </span><span class="gray">Brownie</span><span class="brown">R$ <span class="valor">14.00</span></span>
+            </li>
+            <h2>BEBIDAS</h2>
+            <li class="item"><span class="juntos">
+                <div class="contador"></div><button class="plus">+</button>
+              </span><span class="gray">Refrigerante</span><span class="brown">R$ <span
+                  class="valor">12.00</span></span></li>
+            <li class="item"><span class="juntos">
+                <div class="contador"></div><button class="plus">+</button>
+              </span><span class="gray">Cerveja</span><span class="brown">R$ <span class="valor">15.00</span></span>
+            </li>
+            <li class="item"><span class="juntos">
+                <div class="contador"></div><button class="plus">+</button>
+              </span><span class="gray">Agua</span><span class="brown">R$ <span class="valor">10.00</span></span></li>
+          </ul>
+        </div>
+
+        <div class="conta">
+          <div class="conta-conteudo">
+            <h3 class="titulo-conta">Conta</h3>
+            <table>
+              <thead>
+                <tr>
+                  <th>Qtd.</th>
+                  <th>Desc.</th>
+                  <th>V. Unit.</th>
+                  <th>V. Total</th>
+                </tr>
+              </thead>
+              <tbody class="inicio-pedidos">
+
+              <tfoot class="fecha-pedidos">
+              </tfoot>
+              <tr class="total">
+                <td class="conta-valor" colspan="3">
+                  <div class="total-conta">Total</div>
+                </td>
+                <td colspan="2">
+                  <div class="total-conta">R$ <span class="valor-total">0</span></div>
+                </td>
+              </tr>
+            </table>
+
+          </div>
+        </div>
+
+        <div class="btnpagamento">
+
+        </div>
+      </div>
+    </div>
+
+    <div id="pagamentos" class="pagamentos">
+    </div>
+
+    <div class="conversa">
+      <div class="conversa-pessoas">
+        <div class="conversa-conteudo-pessoas">
+          <div class="balao-pessoas">
+            <img id="balaoPessoa" class="inativo" src="./img/balão-de-fala.png" alt="fala garcom">
+            <div id="texto-boa-noite-pessoas" class="inativo">Boa noite!
+            </div>
+            <div id="resposta-pessoas" class="inativo">Para...<input type="text" id="input-resposta" class="inativo"
+                autofocus><button type="button" id="enviarResposta" class="enviarResposta">>>>></button>
+            </div>
+          </div>
+          <div id="pessoas" class="inativo">
+            <img id="img-pessoas" class="inativo" src="./img/pessoas.png" alt="pessoas">
+          </div>
+        </div>
+      </div>
+      <div class="conversa-garcom">
+        <div class="conversa-conteudo-garcom">
+          <div class="balao-garcom">
+            <img id="balaoGarcom" class="inativo" src="./img/balão-de-fala-esquerda.png" alt="fala garcom">
+            <div id="texto-boa-noite-garcom" class="inativo">Boa noite!</div>
+            <div id="mesa-pessoas" class="inativo">Mesa para quantas pessoas?!</div>
+          </div>
+        </div>
+        <div id="garcom" class="inativo">
+          <img id="img-garcom" class="inativo" src="./img/garcom.png" alt="garcom">
+        </div>
+      </div>
+    </div>
+    <main>
+
+      <script src="index.js"></script>
+      <script src="https://kit.fontawesome.com/0850f00bdd.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

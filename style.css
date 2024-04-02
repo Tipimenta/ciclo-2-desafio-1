@@ -1,0 +1,446 @@
+@import url("https://fonts.cdnfonts.com/css/dot-matrix");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  position: relative; /* Para permitir que o conteúdo sobreposto seja posicionado corretamente */
+}
+
+/* Estilize a imagem de fundo com transparência */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./img/mesa-fundo.jpg) no-repeat center center;
+  background-size: cover;
+  opacity: 0.4; /* Ajuste a opacidade conforme necessário */
+}
+
+/* Estilize a sobreposição branca com transparência */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.5
+  ); /* Ajuste a opacidade conforme necessário */
+}
+
+/* Estilize o conteúdo para garantir que ele apareça acima da sobreposição */
+.content {
+  position: relative;
+  z-index: 1; /* Certifique-se de que o conteúdo esteja na frente da sobreposição */
+}
+
+.menu-container {
+  position: relative;
+  z-index: 4;
+  padding: 10px;
+  background-color: bisque;
+  width: 400px;
+  height: 100vh;
+}
+
+h2 {
+  margin-bottom: 10px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+li:nth-child(3),
+li:nth-child(8),
+li:nth-child(11),
+li:nth-child(15) {
+  margin-bottom: 7px;
+}
+
+.menu-conteudo {
+  border: 2px solid rgb(134, 124, 102);
+  padding: 10px;
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.brown {
+  color: brown;
+}
+
+.gray {
+  color: rgb(44, 40, 26);
+  font-weight: 500;
+}
+
+.plus,
+.minus {
+  width: 25px;
+  color: white;
+}
+
+.plus {
+  background-color: rgb(116, 137, 196);
+}
+
+.minus {
+  background-color: rgb(161, 97, 97);
+}
+
+.contador {
+  border: 1px solid black;
+  background-color: white;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  padding: 3px;
+}
+
+.juntos {
+  display: flex;
+}
+
+.conta {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.conta-conteudo {
+  border: 1px solid black;
+  background-color: rgb(249, 241, 203);
+}
+
+.titulo-conta {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-family: "Dot Matrix", sans-serif;
+  text-align: center;
+  font-size: 22px;
+  border-bottom: 1px dashed #000;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th,
+td {
+  text-align: center;
+  padding: 3px;
+  font-family: "Dot Matrix", sans-serif;
+  font-size: 13px;
+}
+th {
+  border-bottom: 1px dashed #000;
+}
+
+.fecha-pedidos {
+  border-bottom: 2px dashed #000;
+}
+
+.total {
+  border-top: 2px dashed #000;
+}
+
+.conta-valor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-conta {
+  order: 1;
+  font-family: "Dot Matrix", sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  text-align: center;
+  padding: 5px;
+}
+
+.valor-total {
+  order: 2; /* Alinha à extrema direita */
+  text-align: left;
+  font-family: "Dot Matrix", sans-serif;
+  font-size: 26px;
+}
+
+.inativo {
+  display: none;
+}
+
+.ativo {
+  display: flex;
+}
+
+.balao-pessoas {
+  width: 500px;
+  position: relative;
+  bottom: -130px;
+  left: 450px;
+}
+
+.balao-garcom {
+  width: 500px;
+  position: relative;
+  bottom: 400px;
+  left: 350px;
+}
+
+#balaoPessoa {
+  width: 500px;
+}
+
+#balaoGarcom {
+  width: 500px;
+}
+
+#img-garcom,
+#img-pessoas {
+  width: 650px;
+}
+
+#garcom,
+#pessoas {
+  position: relative;
+  display: flex;
+  width: 100%;
+  bottom: 0;
+}
+
+#texto-boa-noite-pessoas,
+#texto-boa-noite-garcom,
+#mesa-pessoas,
+#somos-pessoas,
+#resposta-pessoas {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(0, 0, 0);
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+}
+.conversa-garcom {
+  display: flex;
+  justify-content: end;
+  width: 50%;
+  align-items: end;
+}
+
+.conversa-pessoas {
+  display: flex;
+  justify-content: start;
+  width: 50%;
+  align-items: end;
+}
+
+.conversa {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+#input-resposta {
+  display: block;
+  width: 60px;
+  font-size: 40px;
+  background-color: azure;
+  border: 1px solid rgb(199, 199, 199);
+}
+
+#enviarResposta {
+  background-color: transparent;
+  margin-left: 10px;
+  padding: 12px;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.btnpagamentos {
+  padding: 10px;
+  background-color: rgb(143, 91, 91);
+  color: white;
+  font-size: 16px;
+}
+
+.btnpagamento {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.img-clientes {
+  margin-top: 15px;
+  width: 30px;
+  order: 2;
+  position: relative;
+}
+
+main {
+  display: flex;
+}
+
+.pagamentos {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  align-items: center;
+  column-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pagamentos ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border: 1px solid rgb(199, 199, 199);
+  border-radius: 10px;
+}
+
+.pagamentos img {
+  width: 100px;
+ 
+}
+
+.formasPagamento {
+  display: flex;
+  row-gap: 20px;
+  position: relative;
+  width: 100px;
+  
+}
+
+#forma {
+  width: 50px;
+  height: 40px;
+  padding: 2px;
+  margin: 1px;
+  background-color: white;
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#forma:hover {
+  border: 4px solid rgb(0, 0, 0);
+  
+}
+
+.pagAtivos {
+  width: 60px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  height: 60px;
+  
+}
+
+#pagar {
+  order: 5;
+  padding: 11px;
+  border-radius: 3px;
+  margin-left: 2px;
+  font-weight: 600;
+}
+
+#pagar:hover {
+  border: 3px solid rgb(0, 0, 0);
+}
+
+.pix,
+.dinheiro,
+.cartao {
+  position: relative;
+  order: 5;
+  padding: 10px;
+}
+
+.pix:hover,
+.dinheiro:hover,
+.cartao:hover {
+  border: 1px solid black;
+}
+
+.verConta {
+  padding: 10px;
+  color: white;
+}
+
+.verConta p {
+  margin-top: 15px;
+  font-size: 16px;
+}
+
+.gorjeta {
+  margin-top: 10px;
+  width: 70px;
+  height: 40px;
+  display: inline-block;
+}
+
+.darGorjeta{
+
+  padding: 10px;
+  border-radius: 3px;
+  margin-left: 2px;
+  font-weight: 600;
+}
+
+.darGorjeta:hover{
+  border: 3px solid rgb(0, 0, 0);
+ }
+
+.carimbo {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  animation-name: aparecer;
+  animation-duration: 2.5s; 
+  animation-fill-mode: forwards; 
+}
+
+@keyframes aparecer {
+  0% {
+    transform: scale(1.7); 
+    opacity: 0.5;  
+  }
+  100% {
+    transform: scale(1); 
+    opacity: 1; 
+  }
+}
+
+.bold{
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+}
