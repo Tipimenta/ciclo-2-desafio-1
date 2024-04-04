@@ -194,17 +194,17 @@ th {
 }
 
 .balao-pessoas {
-  width: 500px;
+  width: 100%;
   position: relative;
   bottom: -130px;
   left: 450px;
 }
 
 .balao-garcom {
-  width: 500px;
+  width: 100%;
   position: relative;
-  bottom: 400px;
-  left: 350px;
+  bottom: 300px;
+  left: 250px;
 }
 
 #balaoPessoa {
@@ -235,7 +235,7 @@ th {
 #resposta-pessoas {
   position: absolute;
   top: 40%;
-  left: 50%;
+  left: 42%;
   transform: translate(-50%, -50%);
   color: rgb(0, 0, 0);
   font-size: 40px;
@@ -306,7 +306,7 @@ main {
 .pagamentos {
   width: 100%;
   height: 100vh;
-  display: flex;
+  display: none;
   justify-content: center;
   padding: 40px;
   align-items: center;
@@ -328,7 +328,6 @@ main {
 
 .pagamentos img {
   width: 100px;
- 
 }
 
 .formasPagamento {
@@ -336,7 +335,6 @@ main {
   row-gap: 20px;
   position: relative;
   width: 100px;
-  
 }
 
 #forma {
@@ -350,7 +348,6 @@ main {
 
 #forma:hover {
   border: 4px solid rgb(0, 0, 0);
-  
 }
 
 .pagAtivos {
@@ -359,7 +356,6 @@ main {
   align-items: end;
   justify-content: center;
   height: 60px;
-  
 }
 
 #pagar {
@@ -404,17 +400,16 @@ main {
   display: inline-block;
 }
 
-.darGorjeta{
-
+.darGorjeta {
   padding: 10px;
   border-radius: 3px;
   margin-left: 2px;
   font-weight: 600;
 }
 
-.darGorjeta:hover{
+.darGorjeta:hover {
   border: 3px solid rgb(0, 0, 0);
- }
+}
 
 .carimbo {
   width: 150px;
@@ -423,24 +418,185 @@ main {
   top: 50%;
   left: 40%;
   animation-name: aparecer;
-  animation-duration: 2.5s; 
-  animation-fill-mode: forwards; 
+  animation-duration: 2.5s;
+  animation-fill-mode: forwards;
   order: 9999;
 }
 
 @keyframes aparecer {
   0% {
-    transform: scale(1.7); 
-    opacity: 0.5;  
+    transform: scale(1.7);
+    opacity: 0.5;
   }
   100% {
-    transform: scale(1); 
-    opacity: 1; 
+    transform: scale(1);
+    opacity: 1;
   }
 }
 
-.bold{
+.bold {
   color: black;
   font-weight: 600;
   font-size: 16px;
+}
+
+@media screen and (max-width: 1024px) {
+  #img-pessoas {
+    width: 350px;
+  }
+
+  #img-garcom {
+    width: 300px;
+  }
+
+  #balaoPessoa {
+    width: 350px;
+  }
+
+  #balaoGarcom {
+    width: 350px;
+  }
+
+  .balao-pessoas {
+    width: 100%;
+    bottom: -60px;
+    left: 170px;
+  }
+
+  #texto-boa-noite-pessoas,
+  #texto-boa-noite-garcom,
+  #mesa-pessoas,
+  #somos-pessoas,
+  #resposta-pessoas {
+    left: 47%;
+    font-size: 30px;
+  }
+
+  .menu-container {
+    height: 100%;
+  }
+
+  .carimbo {
+    top: 60%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #img-pessoas {
+    width: 290px;
+  }
+
+  #img-garcom {
+    width: 280px;
+  }
+
+  #balaoPessoa {
+    width: 200px;
+  }
+
+  #balaoGarcom {
+    width: 200px;
+  }
+
+  .balao-pessoas {
+    width: 100%;
+    bottom: -60px;
+    left: 170px;
+  }
+
+  .balao-garcom {
+    bottom: 230px;
+    left: 170px;
+  }
+
+  #texto-boa-noite-garcom,
+  #mesa-pessoas {
+    left: 50%;
+    font-size: 20px;
+  }
+
+  #texto-boa-noite-pessoas,
+  #somos-pessoas,
+  #resposta-pessoas {
+    left: 35%;
+    font-size: 20px;
+  }
+
+  .menu-container {
+    height: 100%;
+  }
+
+  .carimbo {
+    top: 60%;
+  }
+
+  #input-resposta {
+    width: 40px;
+    font-size: 15px;
+  }
+
+  #enviarResposta {
+    margin-left: 8px;
+    padding: 7px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #img-pessoas {
+    width: 230px;
+  }
+
+  #img-garcom {
+    width: 230px;
+  }
+
+  #balaoPessoa {
+    width: 180px;
+  }
+
+  #balaoGarcom {
+    width: 180px;
+  }
+
+  .balao-pessoas {
+    width: 100%;
+    bottom: -60px;
+    left: 170px;
+  }
+
+  .balao-garcom {
+    bottom: 230px;
+    left: 170px;
+  }
+
+  #texto-boa-noite-garcom,
+  #mesa-pessoas {
+    left: 50%;
+    font-size: 14px;
+  }
+
+  #texto-boa-noite-pessoas,
+  #somos-pessoas,
+  #resposta-pessoas {
+    left: 35%;
+    font-size: 14px;
+  }
+
+  .menu-container {
+    height: 100%;
+  }
+
+  .carimbo {
+    top: 60%;
+  }
+
+  #input-resposta {
+    width: 24px;
+    font-size: 12px;
+  }
+
+  #enviarResposta {
+    margin-left: 8px;
+    padding: 6px;
+  }
 }
