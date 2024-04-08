@@ -243,6 +243,7 @@ function numeroPessoas() {
     setTimeout(cardapio, 2000);
 
     boaNoiteGarcom.setAttribute("class", "ativo");
+    garcom.setAttribute("class", "ativo");
     pessoas.setAttribute("class", "inativo");
     boaNoitePessoas.setAttribute("class", "inativo");
     falaGarcom.setAttribute("class", "ativo");
@@ -261,24 +262,38 @@ function iniciarConversaPessoa() {
   falaPessoas.setAttribute("class", "ativo");
   pessoas.setAttribute("class", "ativo");
   boaNoitePessoas.setAttribute("class", "ativo");
+  falaGarcom.setAttribute("class", "inativo");
+  garcom.setAttribute("class", "inativo");
+  boaNoiteGarcom.setAttribute("class", "inativo");
 }
 
 function perguntaGarcom() {
+  falaPessoas.setAttribute("class", "inativo");
+  pessoas.setAttribute("class", "inativo");
+  boaNoitePessoas.setAttribute("class", "inativo");
   boaNoiteGarcom.setAttribute("class", "inativo");
   pergunta.setAttribute("class", "ativo");
+  garcom.setAttribute("class", "ativo");
+  falaGarcom.setAttribute("class", "ativo");
+
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   setTimeout(iniciarConversaGarcom, 4000);
-  setTimeout(iniciarConversaPessoa, 5000);
-  setTimeout(perguntaGarcom, 6500);
-  setTimeout(resposta, 7600);
+  setTimeout(iniciarConversaPessoa, 5800);
+  setTimeout(perguntaGarcom, 7300);
+  setTimeout(resposta, 8800);
 });
 
 function resposta() {
+  falaPessoas.setAttribute("class", "ativo");
+  pessoas.setAttribute("class", "ativo");
   boaNoitePessoas.setAttribute("class", "inativo");
   btnEnviar.setAttribute("class", "ativo");
   respostaPessoas.setAttribute("class", "ativo");
+  pergunta.setAttribute("class", "inativo");
+  garcom.setAttribute("class", "inativo");
+  falaGarcom.setAttribute("class", "inativo");
 }
 
 contador.forEach((cont) => {

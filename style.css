@@ -600,3 +600,70 @@ main {
     padding: 6px;
   }
 }
+
+@media screen and (max-width: 375px) {
+
+
+  #img-pessoas {
+    width: 230px;
+  }
+
+  #img-garcom {
+    width: 230px;
+  }
+
+  #balaoPessoa {
+    width: 180px;
+  }
+
+  #balaoGarcom {
+    width: 180px;
+  }
+
+  .balao-pessoas {
+    width: 100%;
+    bottom: -60px;
+    left: 170px;
+  }
+
+  .balao-garcom {
+    bottom: 230px;
+    left: 170px;
+  }
+
+  #texto-boa-noite-garcom,
+  #mesa-pessoas {
+    left: 50%;
+    font-size: 14px;
+  }
+
+  #texto-boa-noite-pessoas,
+  #somos-pessoas,
+  #resposta-pessoas {
+    left: 35%;
+    font-size: 14px;
+  }
+
+  .menu-container {
+    height: 100%;
+  }
+
+  .carimbo {
+    top: 60%;
+  }
+
+  #input-resposta {
+    width: 24px;
+    font-size: 12px;
+  }
+
+  #enviarResposta {
+    margin-left: 8px;
+    padding: 6px;
+  }
+
+  main{
+    flex-direction: column;
+  }
+}
+
